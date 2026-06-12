@@ -1,0 +1,1449 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"></meta>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"></meta>
+<title>Copa em Cores — 5 Atividades Educativas da Copa do Mundo</title>
+<meta name="description" content="5 atividades educativas da Copa para colorir, aprender, recortar e montar. Arquivos prontos para imprimir, com combo completo por R$ 29,90."></meta>
+<link rel="preconnect" href="https://fonts.googleapis.com"></link>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous"></link>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Nunito:wght@400;700;800&amp;display=swap" rel="stylesheet"></link>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window,document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '27212502635025190');
+fbq('track', 'PageView');
+</script>
+<!-- End Meta Pixel Code -->
+<style>
+/* ============ TOKENS ============ */
+:root{
+  --verde:#00C853; --amarelo:#FFD600; --laranja:#FF6D00; --azul:#1a3a6b;
+  --bg:#081321; --bg-2:#0d1d2d; --bg-3:#050c16;
+  --txt:rgba(255,255,255,.82); --txt-dim:rgba(255,255,255,.55);
+  --accent:var(--verde);
+  --glass-bg:rgba(255,255,255,.05); --glass-border:rgba(255,255,255,.12);
+  --sec-pad:clamp(80px,12vw,160px);
+  --noise:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+img,svg{max-width:100%;}
+main,section,.wrap,.hero-copy,.hero-art,.kit-info{min-width:0;}
+html{scroll-padding-top:84px;}
+body{
+  background:var(--bg); color:var(--txt);
+  font-family:'Nunito',sans-serif; font-size:1.1rem; line-height:1.6;
+  overflow-x:hidden;
+}
+h1,h2,.bebas{font-family:'Bebas Neue',sans-serif; font-weight:400; letter-spacing:-.02em; color:#fff; line-height:1.02; text-wrap:balance;}
+h1{font-size:clamp(3.5rem,8vw,7rem);}
+h2{font-size:clamp(2.5rem,5vw,4rem);}
+h3{font-family:'Nunito',sans-serif; font-weight:700; font-size:1.8rem; color:#fff;}
+p{text-wrap:pretty;}
+a{color:inherit;}
+section{position:relative; padding:var(--sec-pad) 0;}
+.wrap{width:min(1200px,calc(100% - 48px)); margin-inline:auto;}
+.kicker{font-weight:800; font-size:.85rem; letter-spacing:.22em; text-transform:uppercase; color:var(--amarelo);}
+:focus-visible{outline:3px solid var(--amarelo); outline-offset:3px; border-radius:4px;}
+.noise::before{content:""; position:absolute; inset:0; background-image:var(--noise); opacity:.03; pointer-events:none; z-index:1;}
+
+/* ============ BUTTONS ============ */
+.btn{
+  position:relative; display:inline-flex; align-items:center; gap:.6em;
+  font-family:'Nunito',sans-serif; font-weight:800; font-size:1.05rem;
+  color:#06210f; background:linear-gradient(135deg,#6ce47c 0%,var(--accent) 58%,#00a843 100%);
+  border:1px solid rgba(255,255,255,.58); cursor:pointer;
+  padding:1.05em 2.1em; border-radius:999px; text-decoration:none;
+  overflow:hidden; will-change:transform;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.55),inset 0 -3px 0 rgba(0,75,31,.22),0 10px 24px rgba(0,200,83,.22);
+  transition:transform .3s cubic-bezier(.22,1,.36,1),box-shadow .3s ease,filter .3s ease;
+  max-width:100%; text-align:center; justify-content:center; white-space:normal;
+}
+.btn::before{
+  content:""; position:absolute; inset:4px; border:1px solid rgba(255,255,255,.35);
+  border-radius:inherit; pointer-events:none;
+}
+.btn:hover{transform:translateY(-3px); filter:saturate(1.08); box-shadow:inset 0 1px 0 rgba(255,255,255,.65),inset 0 -3px 0 rgba(0,75,31,.2),0 16px 34px rgba(0,200,83,.34);}
+.btn:active{transform:translateY(1px); box-shadow:inset 0 2px 5px rgba(0,60,25,.22),0 6px 14px rgba(0,200,83,.2);}
+.btn-glow{animation:glowPulse 2s ease-in-out infinite;}
+@keyframes glowPulse{
+  0%,100%{box-shadow:0 0 20px var(--accent),0 0 60px rgba(0,200,83,.25),0 0 100px rgba(0,200,83,.12);}
+  50%{box-shadow:0 0 30px var(--accent),0 0 80px rgba(0,200,83,.45),0 0 130px rgba(0,200,83,.22);}
+}
+.btn-shimmer::after{
+  content:""; position:absolute; inset:0; pointer-events:none;
+  background:linear-gradient(115deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);
+  transform:translateX(-110%); animation:shimmer 3s ease-in-out infinite;
+}
+@keyframes shimmer{0%,55%{transform:translateX(-110%);}85%,100%{transform:translateX(110%);}}
+.btn-ghost{
+  background:linear-gradient(135deg,rgba(20,40,65,.9),rgba(7,18,31,.92));
+  color:#fff; border:1px solid rgba(255,214,0,.5);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.12),0 10px 28px rgba(0,0,0,.3);
+}
+.btn .ripple{position:absolute; border-radius:50%; background:rgba(0,200,83,.5); transform:scale(0); pointer-events:none;}
+.btn-ghost .ripple{background:rgba(255,255,255,.35);}
+
+/* ============ PRELOADER ============ */
+#preloader{
+  position:fixed; inset:0; z-index:1000; display:grid; place-items:center;
+  background:var(--bg-3);
+}
+#preloader .pl-logo{display:flex; flex-direction:column; align-items:center; gap:18px;}
+#preloader .pl-ball{
+  width:76px; height:76px; border-radius:50%;
+  background:url("assets/bola-copa-2026.png") center/contain no-repeat;
+  filter:drop-shadow(0 12px 12px rgba(0,0,0,.42));
+  position:relative; animation:plBounce .62s cubic-bezier(.5,.05,.5,1) infinite alternate;
+}
+@keyframes plBounce{from{transform:translateY(-38px) rotate(-18deg);}to{transform:translateY(8px) rotate(18deg) scaleY(.96);}}
+#preloader .pl-name{font-family:'Bebas Neue',sans-serif; font-size:2rem; letter-spacing:.12em; color:#fff;}
+#preloader .pl-name em{color:var(--verde); font-style:normal;}
+
+/* ============ CURSOR ============ */
+#cursor{
+  position:fixed; top:0; left:0; width:40px; height:40px; border-radius:50%;
+  background:#fff; mix-blend-mode:difference; pointer-events:none; z-index:999;
+  transform:translate(-100px,-100px); will-change:transform;
+}
+@media (pointer:coarse){#cursor{display:none;}}
+body.no-cursor #cursor{display:none;}
+
+/* ============ HEADER ============ */
+#header{
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:14px clamp(20px,4vw,48px);
+  background:transparent; transition:background .4s, box-shadow .4s, backdrop-filter .4s;
+}
+#header.scrolled{
+  background:rgba(10,22,40,.8);
+  -webkit-backdrop-filter:blur(20px) saturate(180%); backdrop-filter:blur(20px) saturate(180%);
+  box-shadow:0 1px 0 rgba(255,255,255,.06);
+}
+#header .logo{display:flex; align-items:center; gap:10px; text-decoration:none; font-family:'Bebas Neue',sans-serif; font-size:1.5rem; letter-spacing:.08em; color:#fff;}
+#header .logo .ball{
+  display:block; width:24px; height:24px; flex:none; font-size:0;
+  background:url("assets/bola-copa-2026.png") center/contain no-repeat;
+  filter:drop-shadow(0 2px 3px rgba(0,0,0,.38));
+}
+#header .logo em{color:var(--verde); font-style:normal;}
+#header .btn{padding:.65em 1.5em; font-size:.92rem;}
+#header .buy-short{display:none;}
+#progress{
+  position:absolute; left:0; bottom:0; height:2px; width:100%;
+  background:linear-gradient(90deg,var(--verde),var(--amarelo));
+  transform-origin:left; transform:scaleX(0); will-change:transform;
+}
+
+/* ============ HERO ============ */
+#hero{
+  min-height:100svh; display:grid; align-items:center;
+  padding:140px 0 100px; overflow:hidden; isolation:isolate;
+  background:
+    linear-gradient(90deg,rgba(5,12,22,.94) 0%,rgba(5,12,22,.78) 38%,rgba(5,12,22,.18) 72%,rgba(5,12,22,.46) 100%),
+    linear-gradient(0deg,var(--bg) 0%,transparent 28%),
+    url("assets/stadium-hero.webp") center/cover no-repeat;
+}
+#hero::after{
+  content:""; position:absolute; inset:auto 0 0; height:34%;
+  background:linear-gradient(transparent,var(--bg)); pointer-events:none; z-index:-1;
+}
+#hero .orb{position:absolute; border-radius:50%; filter:blur(70px); mix-blend-mode:screen; pointer-events:none; will-change:transform; z-index:-1;}
+#orb1{width:560px;height:560px; left:-10%; top:5%; background:radial-gradient(circle,rgba(0,200,83,.4),transparent 65%); animation:orb1 12s ease-in-out infinite alternate;}
+#orb2{width:460px;height:460px; right:-8%; top:30%; background:radial-gradient(circle,rgba(255,214,0,.2),transparent 65%); animation:orb2 18s ease-in-out infinite alternate;}
+#orb3{width:640px;height:640px; left:30%; bottom:-25%; background:radial-gradient(circle,rgba(26,58,107,.6),transparent 65%); animation:orb3 15s ease-in-out infinite alternate;}
+@keyframes orb1{from{transform:translate(0,0);}to{transform:translate(120px,90px);}}
+@keyframes orb2{from{transform:translate(0,0);}to{transform:translate(-100px,120px);}}
+@keyframes orb3{from{transform:translate(0,0);}to{transform:translate(90px,-110px);}}
+#hero .wrap{
+  display:grid; grid-template-columns:repeat(12,1fr); gap:24px; align-items:center;
+}
+#hero .hero-copy{grid-column:1/8;}
+#hero h1 .word{display:inline-block; will-change:transform;}
+#hero .hero-sub{
+  margin:28px 0 36px; max-width:34em; font-size:1.15rem; color:var(--txt);
+}
+#hero .hero-sub strong{color:#fff;}
+#hero .hero-offer{
+  display:inline-flex; align-items:center; gap:10px; margin-top:22px;
+  padding:8px 14px; border-radius:999px; color:#fff; font-size:.82rem; font-weight:800;
+  background:rgba(5,14,25,.72); border:1px solid rgba(255,255,255,.18);
+  -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+}
+#hero .hero-offer b{color:var(--amarelo);}
+#hero .hero-ctas{display:flex; flex-wrap:wrap; gap:16px; align-items:center;}
+#hero .hero-mini{margin-top:22px; display:flex; gap:18px; flex-wrap:wrap; font-size:.85rem; font-weight:700; color:var(--txt-dim);}
+#hero .hero-mini span{display:flex; align-items:center; gap:7px;}
+#hero .hero-mini svg{flex:none;}
+
+/* album stack */
+#hero .hero-art{grid-column:8/13; display:grid; place-items:center; min-height:420px;}
+.album-stack{position:relative; width:100%; max-width:420px; height:340px;}
+.album-layer{position:absolute; inset:0; display:grid; place-items:center; will-change:transform;}
+.album{
+  width:160px; height:220px; border-radius:8px; position:relative;
+  display:grid; grid-template-rows:1fr auto; place-items:center; padding:18px 12px 16px;
+  box-shadow:4px 0 8px rgba(0,0,0,.4),8px 0 16px rgba(0,0,0,.3),12px 0 24px rgba(0,0,0,.2),0 20px 40px rgba(0,0,0,.5);
+  will-change:transform;
+}
+.album img{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:8px;}
+.album::before{ /* lombada */
+  content:""; position:absolute; left:0; top:0; bottom:0; width:14px;
+  border-radius:8px 0 0 8px;
+  background:linear-gradient(90deg,rgba(0,0,0,.45),rgba(0,0,0,0));
+}
+.album .al-emoji{font-size:3.4rem; line-height:1;}
+.album .al-title{font-family:'Bebas Neue',sans-serif; font-size:1.15rem; letter-spacing:.14em; color:#fff; text-shadow:0 2px 6px rgba(0,0,0,.4);}
+.album .al-tag{font-size:.6rem; font-weight:800; letter-spacing:.18em; color:rgba(255,255,255,.75); text-transform:uppercase;}
+.album-1{background:linear-gradient(160deg,#FF8A3D,#D84E00);}
+.album-2{background:linear-gradient(160deg,#16D46A,#00803A);}
+.album-3{background:linear-gradient(160deg,#FFE14D,#E0A800); }
+.album-3 .al-title,.album-3 .al-tag{color:#3d2e00; text-shadow:none;}
+.album-4{background:linear-gradient(160deg,#2B5CA8,#122A52);}
+.album-5{background:linear-gradient(160deg,#FFD600,#08753c);}
+
+/* ============ PROVA SOCIAL ============ */
+#prova-social{padding:36px 0; border-top:1px solid rgba(255,255,255,.08); border-bottom:1px solid rgba(255,255,255,.08); background:rgba(8,19,33,.96);}
+#prova-social .wrap{display:flex; flex-wrap:wrap; gap:18px 48px; align-items:center; justify-content:center;}
+#prova-social .ps-item{display:flex; align-items:center; gap:10px; font-weight:700; font-size:.95rem; color:var(--txt);}
+#prova-social svg{flex:none;}
+
+/* ============ VITRINE ============ */
+#vitrine-kits{
+  padding:0; min-height:100vh; overflow:hidden; background:#081321; isolation:isolate;
+}
+#vitrine-kits .stadium-journey{
+  position:absolute; inset:-6%; z-index:-2; pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(5,12,22,.76),rgba(5,12,22,.18) 52%,rgba(5,12,22,.54)),
+    url("assets/stadium-hero.webp") 35% center/cover no-repeat;
+  transform:scale(1.08); transform-origin:center; will-change:transform,background-position;
+}
+#vitrine-kits::after{
+  content:""; position:absolute; inset:0; z-index:-1; pointer-events:none;
+  background:linear-gradient(180deg,rgba(5,12,22,.28),transparent 24%,transparent 75%,rgba(5,12,22,.48));
+}
+#vitrine-kits .wrap{width:100%; max-width:none;}
+#vitrine-kits .vit-head{
+  position:absolute; left:clamp(24px,6vw,90px); top:clamp(82px,10vh,120px);
+  max-width:38em; margin:0; z-index:5;
+}
+#vitrine-kits .vit-head h2{margin-top:14px;}
+.kit-track{
+  display:flex; width:max-content; height:100vh; align-items:center;
+  padding:clamp(210px,27vh,270px) clamp(24px,6vw,90px) 70px;
+  gap:clamp(32px,6vw,96px); will-change:transform;
+  background:linear-gradient(90deg,rgba(5,12,22,.32),rgba(5,12,22,.03));
+}
+.kit-row{
+  display:grid; grid-template-columns:minmax(300px,520px) minmax(270px,410px);
+  gap:clamp(28px,4vw,60px); align-items:center; margin:0; perspective:1200px;
+  width:min(930px,82vw); flex:none; padding:32px;
+  border-radius:32px; background:rgba(5,14,25,.78);
+  border:1px solid rgba(255,255,255,.16);
+  -webkit-backdrop-filter:blur(18px) saturate(130%); backdrop-filter:blur(18px) saturate(130%);
+  box-shadow:0 30px 90px rgba(0,0,0,.42);
+}
+.kit-row:last-child{margin-bottom:0;}
+.kit-row.flip .kit-art{order:2;}
+.kit-card{
+  position:relative; border-radius:24px; padding:0; overflow:hidden;
+  background:var(--glass-bg);
+  -webkit-backdrop-filter:blur(20px) saturate(180%); backdrop-filter:blur(20px) saturate(180%);
+  border:1px solid var(--glass-border);
+  box-shadow:0 8px 32px rgba(0,0,0,.3);
+  aspect-ratio:5/4; display:grid; place-items:center;
+  transform-style:preserve-3d; will-change:transform;
+  transition:box-shadow .45s ease;
+}
+.kit-card.product-real{
+  background:transparent; border:0; box-shadow:none; overflow:visible;
+  -webkit-backdrop-filter:none; backdrop-filter:none;
+}
+.kit-card.product-real img{
+  width:78%; height:96%; object-fit:contain; border-radius:12px;
+  filter:drop-shadow(0 24px 30px rgba(0,0,0,.52)); transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+.kit-card.product-real.landscape img{width:94%; height:82%;}
+.kit-card.product-real:hover img{transform:translateY(-8px) rotate(-1deg) scale(1.025);}
+.kit-card.product-real::after{display:none;}
+.kit-card.product-real:hover{box-shadow:none;}
+.kit-card::after{ /* shine */
+  content:""; position:absolute; inset:-40%; pointer-events:none;
+  background:linear-gradient(120deg,transparent 42%,rgba(255,255,255,.22) 50%,transparent 58%);
+  transform:translate(-70%,-70%) rotate(0.001deg); transition:transform .9s ease;
+}
+.kit-card:hover::after{transform:translate(70%,70%) rotate(0.001deg);}
+.kit-card:hover{box-shadow:0 0 40px var(--kit-glow),0 8px 32px rgba(0,0,0,.3);}
+.kit-row[data-kit="mascotes"]{--kit-glow:rgba(255,109,0,.5); --kit-c:#FF8A3D;}
+.kit-row[data-kit="estadios"]{--kit-glow:rgba(0,200,83,.5); --kit-c:#16D46A;}
+.kit-row[data-kit="selecao"]{--kit-glow:rgba(255,214,0,.5); --kit-c:#FFE14D;}
+.kit-row[data-kit="titulos"]{--kit-glow:rgba(64,120,210,.55); --kit-c:#4078D2;}
+.kit-row[data-kit="papercraft"]{--kit-glow:rgba(255,214,0,.52); --kit-c:#FFD600;}
+/* CSS preview art inside each card */
+.kit-art-stage{position:relative; width:64%; aspect-ratio:3/4; border-radius:12px; background:#fff; box-shadow:0 18px 50px rgba(0,0,0,.45); overflow:hidden; display:grid; place-items:center;}
+.kit-art-stage .half{position:absolute; inset:0; width:50%;}
+.kit-art-stage .half.r{left:auto; right:0;}
+.morphshape{transition:clip-path .6s cubic-bezier(.22,1,.36,1), border-radius .6s cubic-bezier(.22,1,.36,1);}
+/* mascote: friendly blob face */
+.masc-body{width:70%; aspect-ratio:1; border-radius:48% 52% 55% 45%/55% 48% 52% 45%; background:linear-gradient(150deg,#FF8A3D,#E05A00); position:relative;}
+.kit-card:hover .masc-body{border-radius:50%;}
+.masc-eye{position:absolute; top:32%; width:14%; aspect-ratio:1; border-radius:50%; background:#1b1b1b;}
+.masc-eye.l{left:26%;} .masc-eye.r{right:26%;}
+.masc-smile{position:absolute; left:50%; top:54%; width:34%; aspect-ratio:2/1; border:5px solid #1b1b1b; border-top:none; border-radius:0 0 100px 100px; transform:translateX(-50%);}
+/* estadio: bowl of arcs */
+.std-bowl{width:80%; aspect-ratio:2/1; position:relative; overflow:hidden;}
+.std-arc{position:absolute; left:50%; bottom:0; transform:translateX(-50%); border:6px solid; border-bottom:none; border-radius:300px 300px 0 0;}
+.std-arc.a1{width:100%; height:100%; border-color:#00994a;}
+.std-arc.a2{width:72%; height:72%; border-color:#00C853;}
+.std-arc.a3{width:44%; height:44%; border-color:#7ddfa8;}
+.std-field{position:absolute; left:50%; bottom:0; transform:translateX(-50%); width:26%; height:10%; background:#00C853; border-radius:4px 4px 0 0;}
+/* selecao: jersey */
+.jersey{width:62%; aspect-ratio:1/1; background:linear-gradient(160deg,#FFE14D,#F0B400); clip-path:polygon(30% 0,70% 0,82% 8%,100% 22%,88% 38%,80% 30%,80% 100%,20% 100%,20% 30%,12% 38%,0 22%,18% 8%); position:relative;}
+.kit-card:hover .jersey{clip-path:polygon(32% 0,68% 0,84% 10%,100% 26%,86% 40%,80% 32%,80% 100%,20% 100%,20% 32%,14% 40%,0 26%,16% 10%);}
+.jersey .num{position:absolute; left:50%; top:48%; transform:translate(-50%,-50%); font-family:'Bebas Neue',sans-serif; font-size:3rem; color:#0b6b35;}
+/* titulos: trophy + stars */
+.trophy-wrap{display:grid; place-items:center; gap:12px;}
+.trophy{width:90px; height:110px; background:linear-gradient(160deg,#FFE14D,#D69E00); clip-path:polygon(15% 0,85% 0,80% 38%,62% 55%,62% 72%,75% 84%,75% 100%,25% 100%,25% 84%,38% 72%,38% 55%,20% 38%);}
+.stars{display:flex; gap:8px;}
+.star{width:22px; aspect-ratio:1; background:#FFD600; clip-path:polygon(50% 0,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%);}
+/* kit text */
+.kit-info .kit-num{font-family:'Bebas Neue',sans-serif; font-size:1.1rem; letter-spacing:.3em; color:var(--kit-c);}
+.kit-info h3{margin:10px 0 16px; font-size:1.8rem;}
+.kit-info p{color:var(--txt); max-width:30em;}
+.kit-info .kit-pages{
+  display:inline-flex; align-items:center; gap:8px; margin-top:22px;
+  font-weight:800; font-size:.85rem; letter-spacing:.08em; text-transform:uppercase;
+  color:#fff; background:rgba(255,255,255,.07); border:1px solid var(--glass-border);
+  padding:.5em 1.1em; border-radius:999px;
+}
+.kit-info .kit-pages .dot{width:8px; height:8px; border-radius:50%; background:var(--kit-c);}
+.kit-actions{display:flex; align-items:center; gap:14px; margin-top:22px; flex-wrap:wrap;}
+.kit-cta-stack{display:grid; gap:8px; width:min(100%,300px);}
+.btn-combo-mini{
+  padding:.72em 1em; font-size:.76rem; color:#06210f;
+  background:linear-gradient(135deg,#73eb83,var(--verde));
+}
+.kit-cta-hint{display:block; font-size:.62rem; color:var(--amarelo); font-weight:800; text-transform:uppercase; letter-spacing:.08em;}
+.kit-price{font-family:'Bebas Neue',sans-serif; color:#fff; font-size:2rem; line-height:1;}
+.kit-price small{display:block; font-family:'Nunito',sans-serif; font-size:.62rem; color:var(--txt-dim); letter-spacing:.08em; text-transform:uppercase;}
+.btn-kit{
+  padding:.78em 1.3em; font-size:.82rem;
+  background:linear-gradient(135deg,color-mix(in srgb,var(--kit-c),white 24%),var(--kit-c));
+  color:#07131f; border-color:rgba(255,255,255,.65);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.6),inset 0 -3px 0 rgba(0,0,0,.16),0 10px 22px color-mix(in srgb,var(--kit-c),transparent 68%);
+}
+.combo-nudge{
+  display:inline-flex; margin-top:16px; color:var(--amarelo); font-size:.76rem;
+  font-weight:800; letter-spacing:.04em;
+}
+
+/* ============ PREVIEW INTERATIVO ============ */
+#preview-interativo{background:var(--bg-2); overflow:hidden;}
+#preview-interativo .pv-head{text-align:center; max-width:38em; margin:0 auto 56px;}
+#preview-interativo .pv-head h2{margin-top:14px;}
+.pv-tabs{display:flex; flex-wrap:wrap; gap:12px; justify-content:center; margin-bottom:56px;}
+.pv-tab{
+  font-family:'Nunito',sans-serif; font-weight:800; font-size:.95rem; cursor:pointer;
+  color:var(--txt); background:rgba(255,255,255,.06); border:1px solid var(--glass-border);
+  padding:.7em 1.5em; border-radius:999px; transition:all .3s ease;
+}
+.pv-tab[aria-selected="true"]{color:#06210f; background:var(--amarelo); border-color:var(--amarelo);}
+.book-scene{perspective:1600px; display:grid; place-items:center;}
+.book{
+  width:min(760px,92%); aspect-ratio:16/10; display:grid; grid-template-columns:1fr 1fr;
+  border-radius:10px; transform-style:preserve-3d; will-change:transform;
+  box-shadow:0 40px 80px rgba(0,0,0,.55),0 6px 18px rgba(0,0,0,.4);
+  position:relative; background-color:#f5f1e8; background-position:center;
+  background-repeat:no-repeat; background-size:contain;
+}
+.book::after{content:""; position:absolute; left:50%; top:0; bottom:0; width:34px; transform:translateX(-50%);
+  background:linear-gradient(90deg,transparent,rgba(0,0,0,.34) 50%,transparent); pointer-events:none; z-index:3; border-radius:2px;}
+.page{position:relative; overflow:hidden; padding:7%;}
+.page-l{border-radius:10px 2px 2px 10px;}
+.page-r{border-radius:2px 10px 10px 2px; background:#fdfdf8;}
+/* painted page (left) per kit */
+.page-l{display:grid; place-items:center;}
+.page-r{display:grid; place-items:center;}
+.pv-art{width:100%; height:100%; position:relative; display:grid; place-items:center;}
+.book.real-preview-mode .page{background:transparent;}
+.book.real-preview-mode .pv-caption{display:none;}
+.book.papercraft-preview{aspect-ratio:1/1;}
+.book.papercraft-preview::after{display:none;}
+.book.placeholder-preview{background-image:none !important; background:linear-gradient(145deg,#fff9dc,#f2e7b5);}
+.book.placeholder-preview::before{
+  content:"Prévia do Papercraft em breve";
+  position:absolute; inset:12%; z-index:4; display:grid; place-items:center; text-align:center;
+  padding:24px; border:3px dashed rgba(8,117,60,.45); border-radius:18px;
+  font-family:'Bebas Neue',sans-serif; font-size:clamp(1.7rem,5vw,3.2rem);
+  letter-spacing:.04em; color:#08753c;
+}
+.book.placeholder-preview::after{display:none;}
+.pv-caption{position:absolute; left:10px; bottom:6px; font-size:.62rem; font-weight:800; letter-spacing:.2em; text-transform:uppercase; color:rgba(0,0,0,.35); z-index:4;}
+.page-r .pv-caption{color:rgba(0,0,0,.3);}
+/* outline versions reuse same shapes w/ outline modifier */
+.outline .masc-body{background:transparent; border:4px solid #2b2b2b;}
+.outline .masc-eye{background:transparent; border:4px solid #2b2b2b;}
+.outline .std-arc.a1,.outline .std-arc.a2,.outline .std-arc.a3{border-color:#2b2b2b;}
+.outline .std-field{background:transparent; border:4px solid #2b2b2b; border-bottom:none;}
+.outline .jersey{background:transparent; outline:4px solid #2b2b2b; outline-offset:-4px;}
+.outline .jersey .num{color:#2b2b2b; -webkit-text-stroke:0;}
+.outline .trophy{background:transparent; outline:4px solid #2b2b2b; outline-offset:-4px;}
+.outline .star{background:transparent; outline:3px solid #2b2b2b; outline-offset:-3px;}
+.pv-note{text-align:center; margin-top:36px; color:var(--txt-dim); font-size:.95rem; font-weight:700;}
+
+/* ============ NÃO É SÓ COLORIR ============ */
+#nao-e-so-colorir{
+  background:
+    linear-gradient(rgba(5,14,25,.82),rgba(5,14,25,.9)),
+    url("assets/stadium-hero.webp") center 62%/cover fixed no-repeat;
+}
+@keyframes gradMove{0%,100%{background-position:0% 50%;}50%{background-position:100% 50%;}}
+#nao-e-so-colorir .ns-head{text-align:center; max-width:38em; margin:0 auto 72px;}
+#nao-e-so-colorir .ns-head h2{margin-top:14px;}
+.ns-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(24px,4vw,48px);}
+.ns-item{text-align:center;}
+.ns-icon{
+  width:96px; height:96px; margin:0 auto 24px; border-radius:28px;
+  display:grid; place-items:center; will-change:transform;
+  background:var(--glass-bg); border:1px solid var(--glass-border);
+  -webkit-backdrop-filter:blur(20px); backdrop-filter:blur(20px);
+}
+.ns-item h3{font-size:1.4rem; margin-bottom:10px;}
+.ns-item p{color:var(--txt); font-size:1rem; max-width:24em; margin-inline:auto;}
+
+/* ============ COMO FUNCIONA ============ */
+#como-funciona .cf-head{text-align:center; max-width:36em; margin:0 auto 72px;}
+#como-funciona .cf-head h2{margin-top:14px;}
+.cf-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(24px,4vw,48px); counter-reset:step;}
+.cf-step{position:relative; padding:36px 28px; border-radius:24px; background:var(--glass-bg); border:1px solid var(--glass-border);}
+.cf-step .cf-num{font-family:'Bebas Neue',sans-serif; font-size:3.4rem; color:var(--amarelo); line-height:1;}
+.cf-step h3{font-size:1.35rem; margin:14px 0 8px;}
+.cf-step p{font-size:1rem; color:var(--txt);}
+
+/* ============ URGÊNCIA ============ */
+#urgencia-contador{background:var(--bg-3); text-align:center;}
+#urgencia-contador .ur-title{margin-top:14px;}
+.clock{display:flex; gap:clamp(10px,2.5vw,22px); justify-content:center; margin:56px 0 16px; perspective:800px;}
+.clock-block{display:grid; gap:10px; justify-items:center;}
+.clock-card{
+  width:clamp(64px,10vw,104px); aspect-ratio:.9; display:grid; place-items:center;
+  font-family:'Bebas Neue',sans-serif; font-size:clamp(2.2rem,5vw,3.6rem); color:#fff;
+  background:linear-gradient(180deg,#16294a 49.5%,#0e1d38 50.5%);
+  border:1px solid rgba(255,255,255,.1); border-radius:12px;
+  will-change:transform; transform-style:preserve-3d;
+  box-shadow:0 10px 30px rgba(0,0,0,.5);
+}
+.clock-label{font-size:.7rem; font-weight:800; letter-spacing:.25em; text-transform:uppercase; color:var(--txt-dim);}
+.stock{max-width:420px; margin:48px auto 0;}
+.stock-label{font-weight:800; font-size:.95rem; color:var(--amarelo); margin-bottom:14px;}
+.stock-bar{height:10px; border-radius:99px; background:rgba(255,255,255,.08); overflow:hidden;}
+.stock-fill{height:100%; border-radius:99px; background:linear-gradient(90deg,var(--laranja),var(--amarelo)); width:60%; animation:stockDrain 30s ease-in-out infinite alternate; transform-origin:left;}
+@keyframes stockDrain{from{width:60%;}to{width:55%;}}
+
+/* ============ COMBO ============ */
+#combo-destaque{overflow:visible;}
+.combo-card{
+  position:relative; max-width:680px; margin:0 auto; padding:clamp(36px,6vw,64px);
+  border-radius:32px; text-align:center;
+  background:rgba(255,255,255,.05);
+  -webkit-backdrop-filter:blur(20px) saturate(180%); backdrop-filter:blur(20px) saturate(180%);
+  box-shadow:0 8px 32px rgba(0,0,0,.3);
+}
+.combo-border{position:absolute; inset:0; border-radius:32px; padding:2px; pointer-events:none;
+  background:conic-gradient(from var(--ang,0deg),#FFD600,#00C853,#FFD600);
+  -webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);
+  -webkit-mask-composite:xor; mask-composite:exclude;
+  animation:spinBorder 5s linear infinite;
+}
+@property --ang{syntax:"<angle>"; initial-value:0deg; inherits:false;}
+@keyframes spinBorder{to{--ang:360deg;}}
+.combo-card .kicker{color:var(--laranja);}
+.combo-card h2{margin:14px 0 6px;}
+.combo-old{font-weight:700; color:var(--txt-dim); text-decoration:line-through; font-size:1.05rem;}
+.combo-price{font-family:'Bebas Neue',sans-serif; font-size:5rem; color:var(--amarelo); line-height:1; margin:10px 0 4px; text-shadow:0 0 30px rgba(255,214,0,.45),0 4px 14px rgba(255,214,0,.25);}
+.combo-per{font-size:.95rem; font-weight:700; color:var(--txt-dim); margin-bottom:36px;}
+.combo-list{list-style:none; text-align:left; max-width:420px; margin:0 auto 40px; display:grid; gap:18px;}
+.combo-list li{display:flex; gap:14px; align-items:center; font-weight:700; color:#fff; will-change:transform;}
+.combo-list .ck{flex:none; width:30px; height:30px; border-radius:50%; background:rgba(0,200,83,.16); border:1px solid rgba(0,200,83,.45); display:grid; place-items:center;}
+.combo-list .ck path{stroke:var(--verde); stroke-width:3; fill:none; stroke-linecap:round; stroke-linejoin:round; stroke-dasharray:24; stroke-dashoffset:24;}
+.combo-list small{display:block; font-weight:700; color:var(--txt-dim); font-size:.82rem;}
+
+/* ============ DEPOIMENTOS ============ */
+#depoimentos{background:var(--bg-2);}
+#depoimentos .dp-head{text-align:center; max-width:36em; margin:0 auto 72px;}
+#depoimentos .dp-head h2{margin-top:14px;}
+.dp-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:clamp(20px,3vw,32px);}
+.dp-card{
+  padding:34px 30px; border-radius:24px; background:var(--glass-bg); border:1px solid var(--glass-border);
+  -webkit-backdrop-filter:blur(20px) saturate(180%); backdrop-filter:blur(20px) saturate(180%);
+  box-shadow:0 8px 32px rgba(0,0,0,.3); will-change:transform;
+  transition:transform .4s cubic-bezier(.22,1,.36,1), box-shadow .4s cubic-bezier(.22,1,.36,1);
+}
+.dp-card:hover{transform:translateY(-10px); box-shadow:0 14px 30px rgba(0,0,0,.35),0 30px 70px rgba(0,0,0,.45),0 50px 110px rgba(0,0,0,.3);}
+.dp-card.featured{border-color:rgba(255,214,0,.55); box-shadow:0 12px 42px rgba(255,214,0,.08),0 8px 32px rgba(0,0,0,.3);}
+.dp-stars{color:var(--amarelo); letter-spacing:3px; font-size:1rem; margin-bottom:16px;}
+.dp-card blockquote{font-size:1rem; color:var(--txt); margin-bottom:22px;}
+.dp-who{display:flex; align-items:center; gap:12px;}
+.dp-ava{
+  width:52px; height:52px; flex:none; border-radius:50%; object-fit:cover; object-position:center;
+  border:2px solid rgba(255,255,255,.72); box-shadow:0 6px 18px rgba(0,0,0,.3);
+}
+.dp-card.featured .dp-ava{width:58px; height:58px; border-color:var(--amarelo);}
+.dp-who .nm{font-weight:800; color:#fff; font-size:.95rem; line-height:1.2;}
+.dp-who .rl{font-size:.8rem; color:var(--txt-dim); font-weight:700;}
+
+/* ============ CTA FINAL ============ */
+#cta-final{text-align:center;}
+#cta-final h2{max-width:14em; margin:14px auto 20px; font-size:clamp(2.8rem,6vw,5rem);}
+#cta-final p{max-width:32em; margin:0 auto 40px; color:var(--txt);}
+#cta-final .garantia{margin-top:24px; font-size:.88rem; font-weight:700; color:var(--txt-dim); display:flex; gap:8px; align-items:center; justify-content:center;}
+
+/* ============ FOOTER ============ */
+footer{padding:40px 0 48px; border-top:1px solid rgba(255,255,255,.06); background:var(--bg-3);}
+footer .wrap{display:flex; flex-wrap:wrap; gap:16px; align-items:center; justify-content:space-between; font-size:.85rem; color:var(--txt-dim); font-weight:700;}
+footer .logo{font-family:'Bebas Neue',sans-serif; font-size:1.2rem; letter-spacing:.1em; color:#fff;}
+footer .logo em{color:var(--verde); font-style:normal;}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width:1200px){
+  #hero .hero-copy{grid-column:1/8;}
+  #hero .hero-art{grid-column:8/13;}
+}
+@media (max-width:768px){
+  :root{--sec-pad:72px;}
+  .wrap{width:calc(100% - 32px); max-width:1200px;}
+  h1{font-size:clamp(2.8rem,13vw,4.6rem);}
+  h2{font-size:clamp(2.25rem,10vw,3.4rem);}
+  h1,h2,h3,p{max-width:100%;}
+  #hero .wrap{grid-template-columns:1fr;}
+  #hero .hero-copy{grid-column:1/-1; text-align:center;}
+  #hero .hero-art{grid-column:1/-1; min-height:340px; margin-top:24px;}
+  #hero h1 .word{display:inline;}
+  #hero .hero-sub{margin:22px auto 26px; font-size:1rem;}
+  #hero .hero-offer{
+    display:flex; width:100%; justify-content:center; margin-top:8px;
+    line-height:1.35; white-space:normal; flex-wrap:wrap;
+  }
+  #hero .hero-ctas,#hero .hero-mini{justify-content:center;}
+  #hero .hero-ctas{margin-top:22px;}
+  #hero .hero-ctas .btn{width:min(100%,360px); justify-content:center;}
+  #hero .hero-mini{display:grid; grid-template-columns:1fr; gap:8px; justify-items:center;}
+  .album{width:130px; height:180px;}
+  .ns-grid,.cf-grid,.dp-grid{grid-template-columns:1fr;}
+  .book-scene{perspective:1200px;}
+  .book{width:100%; aspect-ratio:4/3; box-shadow:0 18px 42px rgba(0,0,0,.38);}
+  .pv-tabs{margin-bottom:32px; gap:8px;}
+  .pv-tab{padding:.62em 1em; font-size:.82rem;}
+  .pv-note{margin-top:24px; font-size:.82rem;}
+  .combo-card{padding:32px 20px; border-radius:24px;}
+  .combo-price{font-size:4.2rem;}
+  .combo-list{gap:14px;}
+  .dp-who{justify-content:center; text-align:left;}
+
+  #vitrine-kits{padding:0; min-height:100svh; overflow:hidden;}
+  #vitrine-kits .wrap{width:100%; max-width:none;}
+  #vitrine-kits .vit-head{
+    position:absolute; left:20px; right:20px; top:72px;
+    max-width:none; margin:0; text-align:center;
+  }
+  .combo-nudge{
+    display:block; width:fit-content; max-width:100%; margin:12px auto 0;
+    padding:7px 13px; text-align:center; line-height:1.35;
+    background:rgba(4,12,22,.92); border:1px solid rgba(255,214,0,.28);
+    border-radius:999px; box-shadow:0 8px 24px rgba(0,0,0,.28);
+  }
+  .kit-track{
+    display:flex; width:max-content; height:100svh; align-items:center;
+    padding:230px 16px 36px; gap:16px;
+    background:linear-gradient(90deg,rgba(5,12,22,.36),rgba(5,12,22,.04));
+  }
+  .kit-row{
+    display:grid; grid-template-columns:1fr;
+    width:calc(100dvw - 32px); max-width:430px;
+    height:calc(100svh - 266px); min-height:520px; max-height:650px;
+    padding:18px 16px; gap:10px; overflow:hidden; flex:none;
+  }
+  .kit-row.flip .kit-art{order:0;}
+  .kit-art{width:100%; display:grid; place-items:center;}
+  .kit-card,.kit-card.product-real{
+    width:100%; max-width:300px; min-height:210px; max-height:270px; aspect-ratio:4/3;
+    display:grid; place-items:center; transform:none !important;
+  }
+  .kit-card.product-real img{width:auto; height:min(55vw,250px); max-height:250px;}
+  .kit-info{text-align:center;}
+  .kit-info h3{font-size:1.45rem;}
+  .kit-info p{font-size:.86rem; line-height:1.4; margin-inline:auto;}
+  .kit-info .kit-pages{margin-top:8px;}
+  .kit-actions{display:grid; width:100%; justify-items:center; justify-content:stretch;}
+  .kit-actions .kit-price{display:none;}
+  .kit-cta-stack{
+    width:100%; max-width:240px; margin-inline:auto;
+    justify-items:center;
+  }
+  .kit-cta-stack .btn{width:100%; max-width:220px; margin-inline:auto; justify-content:center;}
+  .kit-cta-hint{width:100%; text-align:center;}
+}
+@media (max-width:560px){
+  #header{padding:12px 14px;}
+  #header .logo{font-size:1.08rem;}
+  #header .logo .ball{width:20px; height:20px;}
+  #header .btn{font-size:.72rem; padding:.62em .9em;}
+  #hero{padding:108px 0 62px; min-height:auto;}
+  #hero .hero-art{min-height:270px; margin-top:8px;}
+  .album-stack{height:270px; transform:scale(.9);}
+  #header .buy-full{display:none;}
+  #header .buy-short{display:inline;}
+  #vitrine-kits .vit-head{top:52px;}
+  #vitrine-kits .vit-head h2{font-size:2.15rem;}
+  .kit-track{padding-top:212px;}
+  .kit-row{
+    height:calc(100svh - 238px); min-height:500px;
+    padding:16px 14px;
+  }
+  .kit-card,.kit-card.product-real{min-height:190px; max-height:230px;}
+  .kit-card.product-real img{height:min(58vw,230px);}
+  .kit-info h3{font-size:1.3rem; margin:5px 0 8px;}
+  .kit-info p{font-size:.86rem; line-height:1.5;}
+  .kit-info .kit-num{font-size:.86rem;}
+  .kit-info .kit-pages{margin-top:10px; font-size:.68rem;}
+  .kit-actions{margin-top:12px;}
+  .kit-price{font-size:1.65rem;}
+  .btn-kit{font-size:.72rem;}
+  #prova-social .wrap{display:grid; gap:12px; justify-items:center; text-align:center;}
+  #prova-social .ps-item{font-size:.82rem;}
+  .ns-grid,.cf-grid,.dp-grid{gap:18px;}
+  .dp-grid{row-gap:16px;}
+  .dp-card{transform:none !important;}
+  .ns-item,.cf-step,.dp-card{padding-inline:20px;}
+  .ns-icon{width:78px; height:78px; border-radius:22px;}
+  .clock{gap:6px; margin-top:38px;}
+  .clock-card{width:60px; font-size:2.2rem;}
+  .clock-label{font-size:.58rem; letter-spacing:.14em;}
+  #cta-final h2{font-size:2.8rem;}
+  #cta-final .btn,.combo-card .btn{width:100%; justify-content:center;}
+  #nao-e-so-colorir .ns-head,
+  #como-funciona .cf-head,
+  #depoimentos .dp-head{text-align:center;}
+  .cf-step,.dp-card{text-align:center;}
+  footer .wrap{text-align:center; justify-content:center;}
+  #hero .orb{display:none;}
+  .btn-glow{animation:none;}
+  .kit-card::after{display:none;}
+  .btn,.btn-kit{overflow-wrap:anywhere;}
+  .combo-card,.cf-step,.dp-card,.ns-item{width:100%; max-width:100%;}
+  .combo-list li{min-width:0;}
+  .combo-list li>span:last-child{min-width:0; overflow-wrap:anywhere;}
+}
+@media (max-width:768px) and (max-height:760px){
+  #vitrine-kits .vit-head{top:38px;}
+  #vitrine-kits .vit-head .kicker{font-size:.68rem;}
+  #vitrine-kits .vit-head h2{font-size:1.8rem; margin-top:7px;}
+  .combo-nudge{font-size:.66rem; margin-top:7px; padding:5px 10px;}
+  .kit-track{align-items:flex-start; padding:176px 16px 18px;}
+  .kit-row{
+    height:calc(100svh - 267px); min-height:390px; max-height:420px;
+    padding:10px 12px; gap:4px;
+  }
+  .kit-card,.kit-card.product-real{min-height:145px; max-height:175px;}
+  .kit-card.product-real img{height:min(43vw,170px); max-height:170px;}
+  .kit-info .kit-num{font-size:.7rem;}
+  .kit-info h3{font-size:1.12rem; margin:2px 0 5px;}
+  .kit-info p{font-size:.75rem; line-height:1.3;}
+  .kit-info .kit-pages{margin-top:5px; font-size:.62rem;}
+  .kit-actions{margin-top:2px; gap:6px;}
+  .kit-cta-stack{gap:3px; max-width:220px;}
+  .btn-combo-mini,.kit-cta-stack .btn-kit{padding:.46em .7em; font-size:.6rem;}
+  .kit-cta-hint{font-size:.5rem; line-height:1.1;}
+  .kit-price{font-size:1.35rem;}
+  .btn-kit{padding:.72em .9em; font-size:.66rem;}
+}
+@media (max-width:480px){
+  body{font-size:1rem;}
+  #header .btn{padding:.6em 1em; font-size:.8rem;}
+  .clock{gap:8px;}
+}
+
+/* ============ REDUCED MOTION ============ */
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.15s !important;}
+  html{scroll-behavior:auto;}
+  #cursor{display:none;}
+}
+</style>
+</head>
+<body>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=27212502635025190&amp;ev=PageView&amp;noscript=1"
+alt=""></noscript>
+
+<div id="preloader" aria-hidden="true">
+  <div class="pl-logo">
+    <div class="pl-ball"></div>
+    <div class="pl-name">COPA EM <em>CORES</em></div>
+  </div>
+</div>
+
+<div id="cursor" aria-hidden="true"></div>
+
+<header id="header">
+  <a class="logo" href="#hero" aria-label="Copa em Cores — voltar ao topo">
+    <span class="ball" aria-hidden="true">⚽</span>
+    <span>COPA EM <em>CORES</em></span>
+  </a>
+  <a class="btn" href="https://pay.cakto.com.br/a7aidkg_923985" data-magnetic="" aria-label="Comprar o combo completo por 29 reais e 90 centavos">
+    <span class="buy-full">Comprar — R$ 29,90</span>
+    <span class="buy-short">Comprar</span>
+  </a>
+  <div id="progress" aria-hidden="true"></div>
+</header>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section id="hero" data-screen-label="Hero">
+  <div class="orb" id="orb1" aria-hidden="true"></div>
+  <div class="orb" id="orb2" aria-hidden="true"></div>
+  <div class="orb" id="orb3" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="hero-copy">
+      <p class="kicker">Menos tela. Mais criatividade. Mais Copa em família.</p>
+      <h1 id="hero-title" style="margin-top:18px;">Transforme a Copa em aprendizado longe das telas</h1>
+      <p class="hero-sub" data-blur-in="">Baixe agora <strong>5 atividades educativas da Copa prontas para imprimir.</strong> Seu filho colore, recorta, monta e aprende sobre futebol enquanto cria memórias com você.</p>
+      <p class="hero-offer" data-blur-in=""><b>Mais pedido</b> Leve os 5 por R$ 29,90 · economize R$ 44,60</p>
+      <div class="hero-ctas" data-blur-in="">
+        <a class="btn btn-glow btn-shimmer" href="https://pay.cakto.com.br/a7aidkg_923985" data-magnetic="" aria-label="Quero o combo completo por 29 reais e 90 centavos">
+          <span>Levar os 5 por R$ 29,90</span>
+        </a>
+        <a class="btn btn-ghost" href="#vitrine-kits" data-magnetic="" aria-label="Conhecer todos os produtos">
+          <span>Escolher 1 por R$ 14,90</span>
+        </a>
+      </div>
+      <div class="hero-mini" data-blur-in="">
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C853" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Download imediato</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C853" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>PDF pronto para imprimir</span>
+        <span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#00C853" stroke-width="3" aria-hidden="true"><path d="M4 12l5 5L20 6"></path></svg>Pagamento seguro</span>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true">
+      <div class="album-stack" id="album-stack">
+        <div class="album-layer" data-depth="0.4"><div class="album album-1" data-rot="-10" data-x="-150"><img src="assets/mascotes-cover.webp" alt=""></div></div>
+        <div class="album-layer" data-depth="0.65"><div class="album album-2" data-rot="-5" data-x="-75"><img src="assets/hero-estadios-cover.webp" alt=""></div></div>
+        <div class="album-layer" data-depth="0.9"><div class="album album-3" data-rot="0" data-x="0"><img src="assets/selecao-cover.webp" alt=""></div></div>
+        <div class="album-layer" data-depth="1.15"><div class="album album-4" data-rot="5" data-x="75"><img src="assets/titulos-cover.webp" alt=""></div></div>
+        <div class="album-layer" data-depth="1.4"><div class="album album-5" data-rot="10" data-x="150"><img src="assets/product-papercraft.webp" alt=""></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROVA SOCIAL ============ -->
+<section id="prova-social" data-screen-label="Prova social">
+  <div class="wrap">
+    <div class="ps-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="#FFD600" aria-hidden="true"><path d="M12 2l2.9 6.6 7.1.7-5.4 4.8 1.6 7-6.2-3.7-6.2 3.7 1.6-7L2 9.3l7.1-.7z"></path></svg><span>Feito por educadores para a Copa 2026</span></div>
+    <div class="ps-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#00C853" stroke-width="2.4" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"></rect><path d="M8 8h8M8 12h8M8 16h5"></path></svg><span>5 atividades educativas para imprimir</span></div>
+    <div class="ps-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="2.4" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4"></path><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"></path></svg><span>Entrega imediata por e-mail</span></div>
+    <div class="ps-item"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#9ab" stroke-width="2.4" aria-hidden="true"><rect x="5" y="10" width="14" height="10" rx="2"></rect><path d="M8 10V7a4 4 0 018 0v3"></path></svg><span>Compra protegida</span></div>
+  </div>
+</section>
+
+<!-- ============ VITRINE DOS KITS ============ -->
+<section id="vitrine-kits" data-screen-label="Vitrine dos kits">
+  <div class="stadium-journey" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="vit-head">
+      <p class="kicker">Escolha como entrar em campo</p>
+      <h2>Leve um favorito ou garanta a coleção completa</h2>
+      <span class="combo-nudge">Cada produto: R$ 14,90 · Melhor oferta: leve os 5 por R$ 29,90</span>
+    </div>
+
+    <div class="kit-track">
+    <div class="kit-row" data-kit="mascotes">
+      <div class="kit-art"><div class="kit-card product-real"><img src="assets/product-mascotes.webp" alt="Capa do álbum Mascotes da Copa"></div></div>
+      <div class="kit-info">
+        <p class="kit-num">ÁLBUM 01</p>
+        <h3>Mascotes da Copa</h3>
+        <p>As mascotes inspiradas em México, Canadá e Estados Unidos apresentam os países-sede da Copa 2026 em páginas coloridas e versões prontas para pintar.</p>
+        <span class="kit-pages"><span class="dot"></span>11 páginas para colorir</span>
+        <div class="kit-actions"><div class="kit-price"><small>Individual</small>R$ 14,90</div><div class="kit-cta-stack"><span class="kit-cta-hint">Melhor custo-benefício</span><a class="btn btn-combo-mini" href="https://pay.cakto.com.br/a7aidkg_923985">Levar os 5 · R$ 29,90</a><a class="btn btn-kit" href="https://pay.cakto.com.br/7do89dn_924030" data-checkout="mascotes">Comprar só este · R$ 14,90</a></div></div>
+      </div>
+    </div>
+
+    <div class="kit-row flip" data-kit="estadios">
+      <div class="kit-art"><div class="kit-card product-real"><img src="assets/product-estadios.webp" alt="Capa do álbum Estádios da Copa"></div></div>
+      <div class="kit-info">
+        <p class="kit-num">ÁLBUM 02</p>
+        <h3>Estádios do Mundial</h3>
+        <p>Conheça 16 estádios da Copa 2026, com curiosidades sobre cada cidade e uma versão em traços para a criança observar, aprender e colorir.</p>
+        <span class="kit-pages"><span class="dot"></span>16 páginas para colorir</span>
+        <div class="kit-actions"><div class="kit-price"><small>Individual</small>R$ 14,90</div><div class="kit-cta-stack"><span class="kit-cta-hint">Melhor custo-benefício</span><a class="btn btn-combo-mini" href="https://pay.cakto.com.br/a7aidkg_923985">Levar os 5 · R$ 29,90</a><a class="btn btn-kit" href="https://pay.cakto.com.br/owc46of_924035" data-checkout="estadios">Comprar só este · R$ 14,90</a></div></div>
+      </div>
+    </div>
+
+    <div class="kit-row" data-kit="selecao">
+      <div class="kit-art"><div class="kit-card product-real"><img src="assets/product-selecao.webp" alt="Capa do álbum Seleção Brasileira"></div></div>
+      <div class="kit-info">
+        <p class="kit-num">ÁLBUM 03</p>
+        <h3>Seleção Brasileira</h3>
+        <p>A camisa 10, os craques e os momentos que fizeram o Brasil parar — cenas da Seleção para o seu filho pintar de verde e amarelo.</p>
+        <span class="kit-pages"><span class="dot"></span>12 páginas para colorir</span>
+        <div class="kit-actions"><div class="kit-price"><small>Individual</small>R$ 14,90</div><div class="kit-cta-stack"><span class="kit-cta-hint">Melhor custo-benefício</span><a class="btn btn-combo-mini" href="https://pay.cakto.com.br/a7aidkg_923985">Levar os 5 · R$ 29,90</a><a class="btn btn-kit" href="https://pay.cakto.com.br/fcfw83r_924042" data-checkout="selecao">Comprar só este · R$ 14,90</a></div></div>
+      </div>
+    </div>
+
+    <div class="kit-row flip" data-kit="titulos">
+      <div class="kit-art"><div class="kit-card product-real"><img src="assets/product-titulos-opt.webp" alt="Capa do álbum História dos Títulos"></div></div>
+      <div class="kit-info">
+        <p class="kit-num">ÁLBUM 04</p>
+        <h3>História dos Títulos</h3>
+        <p>1958, 1962, 1970, 1994 e 2002: cada estrela da camisa vira uma página — uma aula de história do futebol que se aprende colorindo.</p>
+        <span class="kit-pages"><span class="dot"></span>7 páginas para colorir</span>
+        <div class="kit-actions"><div class="kit-price"><small>Individual</small>R$ 14,90</div><div class="kit-cta-stack"><span class="kit-cta-hint">Melhor custo-benefício</span><a class="btn btn-combo-mini" href="https://pay.cakto.com.br/a7aidkg_923985">Levar os 5 · R$ 29,90</a><a class="btn btn-kit" href="https://pay.cakto.com.br/39g3t78_924051" data-checkout="titulos">Comprar só este · R$ 14,90</a></div></div>
+      </div>
+    </div>
+
+    <div class="kit-row" data-kit="papercraft">
+      <div class="kit-art"><div class="kit-card product-real"><img src="assets/product-papercraft.webp" alt="Capa do Papercraft Jogadores do Brasil"></div></div>
+      <div class="kit-info">
+        <p class="kit-num">ÁLBUM 05</p>
+        <h3>Paper Craft Jogadores do Brasil</h3>
+        <p>Uma atividade para imprimir, recortar e montar os jogadores do Brasil em 3D. Futebol, criatividade e coordenação motora em uma brincadeira que sai do papel.</p>
+        <span class="kit-pages"><span class="dot"></span>Arquivo PDF pronto para montar</span>
+        <div class="kit-actions"><div class="kit-price"><small>Individual</small>R$ 14,90</div><div class="kit-cta-stack"><span class="kit-cta-hint">Melhor custo-benefício</span><a class="btn btn-combo-mini" href="https://pay.cakto.com.br/a7aidkg_923985">Levar os 5 · R$ 29,90</a><a class="btn btn-kit" href="https://pay.cakto.com.br/6qk527f_924056" data-checkout="papercraft">Comprar só este · R$ 14,90</a></div></div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PREVIEW INTERATIVO ============ -->
+<section id="preview-interativo" class="noise" data-screen-label="Preview interativo">
+  <div class="wrap">
+    <div class="pv-head">
+      <p class="kicker">Espie antes de comprar</p>
+      <h2>Veja como é por dentro</h2>
+    </div>
+    <div class="pv-tabs" role="tablist" aria-label="Escolha um kit para visualizar">
+      <button class="pv-tab" role="tab" aria-selected="true" data-pv="mascotes">Mascotes</button>
+      <button class="pv-tab" role="tab" aria-selected="false" data-pv="estadios">Estádios</button>
+      <button class="pv-tab" role="tab" aria-selected="false" data-pv="selecao">Seleção</button>
+      <button class="pv-tab" role="tab" aria-selected="false" data-pv="titulos">Títulos</button>
+      <button class="pv-tab" role="tab" aria-selected="false" data-pv="papercraft">Papercraft</button>
+    </div>
+    <div class="book-scene">
+      <div class="book" id="book">
+        <div class="page page-l" id="page-l"></div>
+        <div class="page page-r" id="page-r"></div>
+      </div>
+    </div>
+    <p class="pv-note">Página da esquerda: exemplo pintado · Página da direita: a sua, em branco, pronta para colorir</p>
+  </div>
+</section>
+
+<!-- ============ NÃO É SÓ COLORIR ============ -->
+<section id="nao-e-so-colorir" class="noise" data-screen-label="Não é só colorir">
+  <div class="wrap">
+    <div class="ns-head">
+      <p class="kicker">Por que funciona</p>
+      <h2>Não é só colorir</h2>
+    </div>
+    <div class="ns-grid">
+      <div class="ns-item">
+        <div class="ns-icon"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#00C853" stroke-width="1.8" aria-hidden="true"><path d="M12 19l7-7a3.5 3.5 0 00-5-5l-7 7v5h5z"></path><path d="M13 6l5 5"></path></svg></div>
+        <h3>Coordenação motora</h3>
+        <p>Traços largos e detalhes progressivos: cada página exercita controle de movimento e concentração, dos 4 aos 10 anos.</p>
+      </div>
+      <div class="ns-item">
+        <div class="ns-icon"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#FFD600" stroke-width="1.8" aria-hidden="true"><path d="M4 19V5a2 2 0 012-2h13v14H6a2 2 0 00-2 2zm0 0a2 2 0 002 2h13"></path></svg></div>
+        <h3>História de verdade</h3>
+        <p>Cada desenho vem de um fato real do futebol: mascotes, estádios e títulos viram uma aula que a criança quer repetir.</p>
+      </div>
+      <div class="ns-item">
+        <div class="ns-icon"><svg width="42" height="42" viewBox="0 0 24 24" fill="none" stroke="#FF8A3D" stroke-width="1.8" aria-hidden="true"><path d="M12 21s-7-4.6-9.5-9A5.5 5.5 0 0112 6.5 5.5 5.5 0 0121.5 12c-2.5 4.4-9.5 9-9.5 9z"></path></svg></div>
+        <h3>Tempo longe das telas</h3>
+        <p>Uma atividade de mesa que reúne pais e filhos em volta da Copa — sem tablet, sem celular, só papel e lápis de cor.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMO FUNCIONA ============ -->
+<section id="como-funciona" data-screen-label="Como funciona">
+  <div class="wrap">
+    <div class="cf-head">
+      <p class="kicker">Simples assim</p>
+      <h2>Do clique à mesa em minutos</h2>
+    </div>
+    <div class="cf-grid">
+      <div class="cf-step">
+        <div class="cf-num">1</div>
+        <h3>Garanta o combo</h3>
+        <p>Pagamento único de R$ 29,90 pelos 5 álbuns completos. Sem assinatura, sem mensalidade.</p>
+      </div>
+      <div class="cf-step">
+        <div class="cf-num">2</div>
+        <h3>Receba na hora</h3>
+        <p>Os 5 PDFs chegam no seu e-mail imediatamente após a confirmação do pagamento.</p>
+      </div>
+      <div class="cf-step">
+        <div class="cf-num">3</div>
+        <h3>Imprima sem limite</h3>
+        <p>Errou a cor? Imprima de novo. Os arquivos são seus para sempre, quantas cópias quiser.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ URGÊNCIA / CONTADOR ============ -->
+<section id="urgencia-contador" class="noise" data-screen-label="Urgência e contador">
+  <div class="wrap">
+    <p class="kicker">Oferta de lançamento</p>
+    <h2 class="ur-title">Esta oferta é por tempo limitado</h2>
+    <div class="clock" id="clock" aria-label="Contagem regressiva para o fim da oferta">
+      <div class="clock-block"><div class="clock-card" data-unit="d">02</div><div class="clock-label">Dias</div></div>
+      <div class="clock-block"><div class="clock-card" data-unit="h">11</div><div class="clock-label">Horas</div></div>
+      <div class="clock-block"><div class="clock-card" data-unit="m">48</div><div class="clock-label">Minutos</div></div>
+      <div class="clock-block"><div class="clock-card" data-unit="s">30</div><div class="clock-label">Segundos</div></div>
+    </div>
+    <div class="stock">
+      <p class="stock-label">Apenas 47 combos restantes neste preço</p>
+      <div class="stock-bar"><div class="stock-fill"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ COMBO DESTAQUE ============ -->
+<section id="combo-destaque" data-screen-label="Combo destaque">
+  <div class="wrap" id="combo-pin">
+    <div class="combo-card">
+      <div class="combo-border" aria-hidden="true"></div>
+      <p class="kicker">Combo completo</p>
+      <h2>Os 5 álbuns juntos</h2>
+      <p class="combo-old">de R$ 74,50</p>
+      <p class="combo-price" id="combo-price">R$ 29,90</p>
+      <p class="combo-per">pagamento único · menos de R$ 6 por álbum · economize R$ 44,60</p>
+      <ul class="combo-list">
+        <li class="combo-item"><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5 11-11"></path></svg></span><span>Álbum Mascotes da Copa <small>11 páginas · de Willie a 2026</small></span></li>
+        <li class="combo-item"><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5 11-11"></path></svg></span><span>Álbum Estádios do Mundial <small>16 páginas · os palcos das finais</small></span></li>
+        <li class="combo-item"><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5 11-11"></path></svg></span><span>Álbum Seleção Brasileira <small>12 páginas · craques e momentos</small></span></li>
+        <li class="combo-item"><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5 11-11"></path></svg></span><span>Álbum História dos Títulos <small>7 páginas · as 5 estrelas do Brasil</small></span></li>
+        <li class="combo-item"><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5 11-11"></path></svg></span><span>Álbum Papercraft Jogadores do Brasil <small>recorte, monte e entre em campo</small></span></li>
+        <li class="combo-item"><span class="ck"><svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12l5 5 11-11"></path></svg></span><span>Impressão ilimitada para sempre <small>PDF em alta resolução, formato A4</small></span></li>
+      </ul>
+      <a class="btn btn-glow btn-shimmer" href="https://pay.cakto.com.br/a7aidkg_923985" data-magnetic="" aria-label="Garantir o combo completo agora por 29 reais e 90 centavos">
+        <span>Garantir meu combo agora</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DEPOIMENTOS ============ -->
+<section id="depoimentos" data-screen-label="Depoimentos">
+  <div class="wrap">
+    <div class="dp-head">
+      <p class="kicker">Quem já coloriu</p>
+      <h2>Famílias que entraram no clima da Copa</h2>
+    </div>
+    <div class="dp-grid">
+      <div class="dp-card featured">
+        <div class="dp-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <blockquote>"O dos títulos é o favorito aqui em casa. A cada página meu pai conta para as netas onde ele estava em cada final. Vale cada centavo."</blockquote>
+        <div class="dp-who"><img class="dp-ava" src="assets/depoimento-juliana.jpg" alt="Foto de Juliana R." loading="lazy"><div><div class="nm">Juliana R.</div><div class="rl">mãe de duas meninas</div></div></div>
+      </div>
+      <div class="dp-card">
+        <div class="dp-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <blockquote>"Imprimi o álbum das mascotes no domingo e meu filho de 6 anos passou a tarde inteira colorindo. Agora ele sabe o nome de todas."</blockquote>
+        <div class="dp-who"><img class="dp-ava" src="assets/depoimento-mariana.jpg" alt="Foto de Mariana S." loading="lazy"><div><div class="nm">Mariana S.</div><div class="rl">mãe do Theo, 6 anos</div></div></div>
+      </div>
+      <div class="dp-card">
+        <div class="dp-stars" aria-label="5 de 5 estrelas">★★★★★</div>
+        <blockquote>"Uso o álbum dos estádios na minha turma do 3º ano. Virou a atividade mais pedida da semana — e ainda rende conversa sobre geografia."</blockquote>
+        <div class="dp-who"><img class="dp-ava" src="assets/depoimento-carlos.jpg" alt="Foto de Carlos E." loading="lazy"><div><div class="nm">Carlos E.</div><div class="rl">professor do ensino fundamental</div></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA FINAL ============ -->
+<section id="cta-final" data-screen-label="CTA final">
+  <div class="wrap">
+    <p class="kicker">A Copa começa agora</p>
+    <h2>Transforme o mundial em memória de família</h2>
+    <p>5 álbuns, um pagamento único e diversão pronta para imprimir. Daqui a vinte anos, essas páginas coloridas vão valer mais do que qualquer figurinha.</p>
+    <a class="btn btn-glow btn-shimmer" href="https://pay.cakto.com.br/a7aidkg_923985" data-magnetic="" aria-label="Quero o combo por 29 reais e 90 centavos">
+      <span>Quero os 5 álbuns — R$ 29,90</span>
+    </a>
+    <p class="garantia"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#00C853" stroke-width="2.4" aria-hidden="true"><path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z"></path><path d="M9 12l2 2 4-4"></path></svg><span>7 dias de garantia incondicional — não gostou, devolvemos.</span></p>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span class="logo">COPA EM <em>CORES</em></span>
+    <span>Produto digital · entrega por e-mail · <a href="mailto:suporte@copaemcores.com.br">suporte@copaemcores.com.br</a></span>
+    <span>© 2026 Copa em Cores</span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js" crossorigin="anonymous"></script>
+<script>
+(function(){
+"use strict";
+var reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+var finePointer = window.matchMedia('(pointer: fine)').matches;
+var hasGSAP = typeof gsap !== 'undefined';
+if (hasGSAP && typeof ScrollTrigger !== 'undefined') gsap.registerPlugin(ScrollTrigger);
+
+/* ---------- Scroll: nativo + anchors animados via rAF (CSS smooth-scroll conflita com ScrollTrigger) ---------- */
+(function(){
+  var scrollAnim = null;
+  function animateScrollTo(targetY){
+    if (scrollAnim) cancelAnimationFrame(scrollAnim);
+    var startY = window.scrollY || document.documentElement.scrollTop;
+    var max = document.documentElement.scrollHeight - window.innerHeight;
+    targetY = Math.max(0, Math.min(max, targetY));
+    if (reduced) { window.scrollTo(0, targetY); return; }
+    var dist = targetY - startY;
+    var dur = Math.min(1100, 350 + Math.abs(dist) * 0.25);
+    var t0 = performance.now();
+    function ease(k){ return k < 0.5 ? 4*k*k*k : 1 - Math.pow(-2*k+2, 3)/2; }
+    (function step(now){
+      var k = Math.min(1, (now - t0) / dur);
+      window.scrollTo(0, startY + dist * ease(k));
+      if (k < 1) scrollAnim = requestAnimationFrame(step);
+      else scrollAnim = null;
+    })(t0);
+  }
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if (id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      var y = target.getBoundingClientRect().top + (window.scrollY || document.documentElement.scrollTop) - 80;
+      animateScrollTo(y);
+      try { history.pushState(null, '', id); } catch (err) {}
+    });
+  });
+})();
+
+/* ---------- Preloader ---------- */
+var pre = document.getElementById('preloader');
+var heroIntroPlayed = false;
+function heroIntro(){
+  if (heroIntroPlayed || !hasGSAP) return;
+  heroIntroPlayed = true;
+  if (reduced) {
+    gsap.set('#hero-title .word, [data-blur-in]', { clearProps: 'all' });
+    return;
+  }
+  var tl = gsap.timeline();
+  tl.from('#hero-title .word', { y: -60, opacity: 0, duration: 0.8, stagger: 0.08, ease: 'back.out(1.6)' });
+  tl.fromTo('[data-blur-in]',
+    { opacity: 0, filter: 'blur(12px)' },
+    { opacity: 1, filter: 'blur(0px)', duration: 1.2, stagger: 0.12, ease: 'power3.out', clearProps: 'filter' }, '-=0.3');
+  tl.from('.album-layer', { y: 80, opacity: 0, duration: 1, stagger: 0.1, ease: 'power4.out' }, 0.4);
+}
+function hidePreloader(){
+  if (!pre) return;
+  if (hasGSAP && !reduced) {
+    gsap.to(pre, { opacity: 0, duration: 0.6, ease: 'power2.inOut', onComplete: function(){ pre.remove(); heroIntro(); } });
+  } else { pre.remove(); heroIntro(); }
+}
+var loaded = false, minTime = false;
+// não espera o window.load (CDNs pesados atrasam) — esconde após um tempo curto fixo
+setTimeout(hidePreloader, reduced ? 100 : 900);
+
+/* ---------- Split hero title into words ---------- */
+var ht = document.getElementById('hero-title');
+if (ht) {
+  ht.innerHTML = ht.textContent.trim().split(/\s+/).map(function(w){
+    return '<span class="word">' + w + '</span>';
+  }).join(' ');
+}
+
+/* ---------- Header scrolled + progress ---------- */
+var header = document.getElementById('header');
+var progress = document.getElementById('progress');
+function onScroll(){
+  var y = window.scrollY || document.documentElement.scrollTop;
+  header.classList.toggle('scrolled', y > 100);
+  var max = document.documentElement.scrollHeight - window.innerHeight;
+  if (progress) progress.style.transform = 'scaleX(' + (max > 0 ? Math.min(1, y / max) : 0) + ')';
+}
+window.addEventListener('scroll', onScroll, { passive: true });
+onScroll();
+
+/* ---------- Custom cursor ---------- */
+var cursor = document.getElementById('cursor');
+if (cursor && finePointer && !reduced) {
+  var cx = -100, cy = -100, tx = -100, ty = -100, cs = 1, ts = 1;
+  document.addEventListener('mousemove', function(e){ tx = e.clientX; ty = e.clientY; });
+  document.addEventListener('mouseover', function(e){
+    ts = e.target.closest('a,button,[role="tab"]') ? 2 : 1;
+  });
+  (function cursorLoop(){
+    cx += (tx - cx) * 0.1; cy += (ty - cy) * 0.1; cs += (ts - cs) * 0.15;
+    cursor.style.transform = 'translate(' + (cx - 20) + 'px,' + (cy - 20) + 'px) scale(' + cs + ')';
+    requestAnimationFrame(cursorLoop);
+  })();
+} else if (cursor) { cursor.style.display = 'none'; }
+
+/* ---------- Album parallax (mouse) + scroll spread ---------- */
+(function(){
+  var stack = document.getElementById('album-stack');
+  if (!stack || !hasGSAP) return;
+  var albums = stack.querySelectorAll('.album');
+  // initial fanned state
+  albums.forEach(function(al){
+    gsap.set(al, { rotation: parseFloat(al.dataset.rot), x: parseFloat(al.dataset.x) * 0.25 });
+  });
+  if (reduced) return;
+  // scroll: spread out flat
+  albums.forEach(function(al){
+    gsap.to(al, {
+      rotation: 0, x: parseFloat(al.dataset.x),
+      ease: 'none',
+      scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom 40%', scrub: true }
+    });
+  });
+  // mouse parallax with lerp on layers
+  if (finePointer) {
+    var mx = 0, my = 0, gx = 0, gy = 0;
+    document.getElementById('hero').addEventListener('mousemove', function(e){
+      var r = stack.getBoundingClientRect();
+      gx = (e.clientX - (r.left + r.width / 2)) / r.width;
+      gy = (e.clientY - (r.top + r.height / 2)) / r.height;
+    });
+    var layers = stack.querySelectorAll('.album-layer');
+    gsap.ticker.add(function(){
+      mx += (gx - mx) * 0.06; my += (gy - my) * 0.06;
+      layers.forEach(function(l){
+        var d = parseFloat(l.dataset.depth);
+        l.style.transform = 'translate(' + (mx * 26 * d) + 'px,' + (my * 18 * d) + 'px)';
+      });
+    });
+  }
+})();
+
+/* ---------- ScrollTrigger animations ---------- */
+if (hasGSAP && !reduced) {
+
+  // Stadium journey: the product chapters travel sideways as the visitor scrolls.
+  gsap.to('#hero', {
+    backgroundPosition: '62% center, center bottom, 62% center',
+    ease: 'none',
+    scrollTrigger: {
+      trigger: '#hero',
+      start: 'top top',
+      end: 'bottom top',
+      scrub: true
+    }
+  });
+
+  gsap.matchMedia().add('(min-width: 1px)', function(){
+    var track = document.querySelector('.kit-track');
+    var stadium = document.querySelector('.stadium-journey');
+    if (!track) return;
+    var getDistance = function(){ return Math.max(0, track.scrollWidth - window.innerWidth); };
+    var journey = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#vitrine-kits',
+        start: 'top top',
+        end: function(){ return '+=' + getDistance(); },
+        pin: true,
+        scrub: 0.8,
+        invalidateOnRefresh: true
+      }
+    });
+    journey.to(track, {
+      x: function(){ return -getDistance(); },
+      ease: 'none'
+    }, 0);
+    if (stadium) {
+      journey.fromTo(stadium,
+        { backgroundPosition: '24% center', scale: 1.08, xPercent: 0 },
+        { backgroundPosition: '82% center', scale: 1.22, xPercent: -3, ease: 'none' },
+        0
+      );
+    }
+  });
+
+  // clip-path reveal for section heads
+  ['#vitrine-kits .vit-head', '#preview-interativo .pv-head', '#nao-e-so-colorir .ns-head', '#como-funciona .cf-head', '#depoimentos .dp-head', '#cta-final .wrap'].forEach(function(sel){
+    var el = document.querySelector(sel);
+    if (!el) return;
+    gsap.fromTo(el,
+      { clipPath: 'polygon(0 100%, 100% 100%, 100% 100%, 0 100%)', y: 50 },
+      { clipPath: 'polygon(0 0%, 100% 0%, 100% 100%, 0 100%)', y: 0, duration: 1.1, ease: 'power4.out',
+        scrollTrigger: { trigger: el, start: 'top 85%' } });
+  });
+
+  // kit cards: 3D flip reveal
+  document.querySelectorAll('.kit-card').forEach(function(card, i){
+    gsap.fromTo(card, { rotationY: 90, opacity: 0 }, {
+      rotationY: 0, opacity: 1, duration: 1.2, delay: (i % 2) * 0.15, ease: 'back.out(1.4)',
+      scrollTrigger: { trigger: card, start: 'top 82%' }
+    });
+  });
+  document.querySelectorAll('.kit-info').forEach(function(info){
+    gsap.from(info.children, {
+      x: 40, opacity: 0, duration: 0.9, stagger: 0.08, ease: 'power3.out',
+      scrollTrigger: { trigger: info, start: 'top 82%' }
+    });
+  });
+
+  // section background parallax (0.4x feel)
+  gsap.utils.toArray('.orb').forEach(function(orb){
+    gsap.to(orb, { yPercent: 30, ease: 'none',
+      scrollTrigger: { trigger: '#hero', start: 'top top', end: 'bottom top', scrub: true } });
+  });
+
+  // ns icons elastic pop
+  gsap.from('.ns-icon', {
+    scale: 0, duration: 1.4, stagger: 0.15, ease: 'elastic.out(1, 0.5)',
+    scrollTrigger: { trigger: '.ns-grid', start: 'top 80%' }
+  });
+  gsap.from('.ns-item h3, .ns-item p', {
+    y: 30, opacity: 0, duration: 0.8, stagger: 0.08, ease: 'power3.out',
+    scrollTrigger: { trigger: '.ns-grid', start: 'top 80%' }
+  });
+
+  // como funciona steps
+  gsap.from('.cf-step', {
+    y: 60, opacity: 0, duration: 0.9, stagger: 0.12, ease: 'power4.out',
+    scrollTrigger: { trigger: '.cf-grid', start: 'top 82%' }
+  });
+
+  // combo: pinned on desktop; mobile keeps a clean native document flow.
+  gsap.matchMedia().add('(min-width: 769px)', function(){
+    var items = gsap.utils.toArray('.combo-item');
+    var tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: '#combo-destaque', start: 'top top', end: '+=900',
+        pin: true, scrub: true
+      }
+    });
+    items.forEach(function(it){
+      tl.from(it, { x: -40, opacity: 0, duration: 0.5, ease: 'power2.out' });
+      tl.to(it.querySelector('.ck path'), { strokeDashoffset: 0, duration: 0.35, ease: 'power1.inOut' }, '<+=0.15');
+    });
+    tl.from('#combo-destaque .btn', { scale: 0.85, opacity: 0, duration: 0.6, ease: 'back.out(2)' });
+  });
+  gsap.matchMedia().add('(max-width: 768px)', function(){
+    document.querySelectorAll('.combo-list .ck path').forEach(function(path){
+      path.style.strokeDashoffset = 0;
+    });
+  });
+
+  // depoimentos: cascade no desktop e entrada mais estável no mobile.
+  gsap.matchMedia().add('(min-width: 769px)', function(){
+    gsap.from('.dp-card', {
+      y: 90, opacity: 0, duration: 1.3, stagger: 0.2, ease: 'elastic.out(1, 0.6)',
+      scrollTrigger: { trigger: '.dp-grid', start: 'top 82%' }
+    });
+  });
+  gsap.matchMedia().add('(max-width: 768px)', function(){
+    gsap.from('.dp-card', {
+      opacity: 0, duration: 0.55, stagger: 0.1, ease: 'power2.out',
+      scrollTrigger: { trigger: '.dp-grid', start: 'top 88%' }
+    });
+  });
+
+  // price scramble
+  (function(){
+    var el = document.getElementById('combo-price');
+    if (!el) return;
+    var final = 'R$ 29,90';
+    var played = false;
+    ScrollTrigger.create({
+      trigger: el, start: 'top 90%',
+      onEnter: function(){
+        if (played) return; played = true;
+        var t0 = performance.now(), dur = 1200;
+        var iv = setInterval(function(){
+          var k = (performance.now() - t0) / dur;
+          if (k >= 1) { el.textContent = final; clearInterval(iv); return; }
+          el.textContent = final.split('').map(function(ch, idx){
+            if (!/[0-9]/.test(ch)) return ch;
+            return (idx / final.length) < k ? ch : String(Math.floor(Math.random() * 10));
+          }).join('');
+        }, 40);
+      }
+    });
+  })();
+} else if (hasGSAP && reduced) {
+  // reduced motion: simple fades only
+  gsap.utils.toArray('.kit-card, .kit-info, .ns-item, .cf-step, .dp-card, .combo-item').forEach(function(el){
+    gsap.from(el, { opacity: 0, duration: 0.4,
+      scrollTrigger: { trigger: el, start: 'top 90%' } });
+  });
+  document.querySelectorAll('.ck path').forEach(function(p){ p.style.strokeDashoffset = 0; });
+} else {
+  document.querySelectorAll('.ck path').forEach(function(p){ p.style.strokeDashoffset = 0; });
+}
+
+/* ---------- Countdown flip clock ---------- */
+(function(){
+  var KEY = 'cec-offer-deadline';
+  var deadline = parseInt(localStorage.getItem(KEY) || '0', 10);
+  if (!deadline || deadline < Date.now()) {
+    deadline = Date.now() + (2 * 24 + 11) * 3600 * 1000; // ~2d11h
+    try { localStorage.setItem(KEY, String(deadline)); } catch (e) {}
+  }
+  var cards = {};
+  document.querySelectorAll('.clock-card').forEach(function(c){ cards[c.dataset.unit] = c; });
+  function setVal(unit, v){
+    var el = cards[unit]; if (!el) return;
+    var s = String(v).padStart(2, '0');
+    if (el.textContent === s) return;
+    if (hasGSAP && !reduced) {
+      gsap.to(el, { rotationX: 90, duration: 0.22, ease: 'power2.in', onComplete: function(){
+        el.textContent = s;
+        gsap.to(el, { rotationX: 0, duration: 0.22, ease: 'power2.out' });
+      } });
+    } else { el.textContent = s; }
+  }
+  function tick(){
+    var ms = Math.max(0, deadline - Date.now());
+    var s = Math.floor(ms / 1000);
+    setVal('d', Math.floor(s / 86400));
+    setVal('h', Math.floor(s % 86400 / 3600));
+    setVal('m', Math.floor(s % 3600 / 60));
+    setVal('s', s % 60);
+  }
+  tick(); setInterval(tick, 1000);
+})();
+
+/* ---------- Interactive book preview ---------- */
+(function(){
+  var realPreviews = {
+    mascotes: 'assets/preview-mascotes.webp',
+    estadios: 'assets/preview-estadios.webp',
+    selecao: 'assets/preview-selecao.webp',
+    titulos: 'assets/preview-titulos.webp',
+    papercraft: 'assets/preview-papercraft.webp'
+  };
+  var art = {
+    estadios: '<div class="pv-art"><div class="std-bowl" style="width:88%;"><div class="std-arc a1"></div><div class="std-arc a2"></div><div class="std-arc a3"></div><div class="std-field"></div></div></div>',
+    selecao: '<div class="pv-art"><div class="jersey" style="width:52%;"><span class="num">10</span></div></div>',
+    titulos: '<div class="pv-art"><div class="trophy-wrap"><div class="trophy"></div><div class="stars"><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div><div class="star"></div></div></div></div>'
+  };
+  var bgs = {
+    mascotes: 'linear-gradient(150deg,#FFB37E,#FF8A3D)',
+    estadios: 'linear-gradient(150deg,#9fe8c0,#3ddb86)',
+    selecao: 'linear-gradient(150deg,#fff3a8,#FFE14D)',
+    titulos: 'linear-gradient(150deg,#9db9e8,#5585d2)'
+  };
+  var captions = { mascotes: 'Mascotes · pág. 04', estadios: 'Estádios · pág. 07', selecao: 'Seleção · pág. 03', titulos: 'Títulos · pág. 02' };
+  var L = document.getElementById('page-l'), R = document.getElementById('page-r'), book = document.getElementById('book');
+  if (!L || !R) return;
+  function fill(kit){
+    book.classList.remove('placeholder-preview');
+    book.classList.toggle('papercraft-preview', kit === 'papercraft');
+    if (!realPreviews[kit]) {
+      book.classList.remove('real-preview-mode');
+      book.classList.add('placeholder-preview');
+      book.style.backgroundImage = 'none';
+      L.style.background = 'transparent';
+      R.style.background = 'transparent';
+      L.innerHTML = '';
+      R.innerHTML = '';
+      return;
+    }
+    book.classList.add('real-preview-mode');
+    book.style.backgroundImage = 'url("' + realPreviews[kit] + '")';
+    L.style.background = 'transparent';
+    L.innerHTML = '';
+    R.innerHTML = '';
+  }
+  fill('mascotes');
+  var busy = false;
+  document.querySelectorAll('.pv-tab').forEach(function(tab){
+    tab.addEventListener('click', function(){
+      if (busy) return;
+      if (tab.getAttribute('aria-selected') === 'true') return;
+      document.querySelectorAll('.pv-tab').forEach(function(t){ t.setAttribute('aria-selected', t === tab ? 'true' : 'false'); });
+      var kit = tab.dataset.pv;
+      if (!reduced && typeof book.animate === 'function') {
+        busy = true;
+        var closeTurn = book.animate([
+          { transform: 'rotateY(0deg) scale(1)', opacity: 1 },
+          { transform: 'rotateY(-72deg) scale(.96)', opacity: .55 }
+        ], { duration: 320, easing: 'cubic-bezier(.55,.06,.68,.19)', fill: 'forwards' });
+        closeTurn.onfinish = function(){
+          closeTurn.cancel();
+          fill(kit);
+          var openTurn = book.animate([
+            { transform: 'rotateY(72deg) scale(.96)', opacity: .55 },
+            { transform: 'rotateY(0deg) scale(1)', opacity: 1 }
+          ], { duration: 440, easing: 'cubic-bezier(.22,1,.36,1)', fill: 'forwards' });
+          openTurn.onfinish = function(){
+            openTurn.cancel();
+            busy = false;
+          };
+        };
+      } else { fill(kit); }
+    });
+  });
+})();
+
+/* ---------- Magnetic buttons ---------- */
+if (finePointer && !reduced) {
+  document.querySelectorAll('[data-magnetic]').forEach(function(btn){
+    var bx = 0, by = 0, tx2 = 0, ty2 = 0, raf = null;
+    function loop(){
+      bx += (tx2 - bx) * 0.18; by += (ty2 - by) * 0.18;
+      btn.style.transform = 'translate(' + bx + 'px,' + by + 'px)';
+      if (Math.abs(tx2 - bx) > 0.1 || Math.abs(ty2 - by) > 0.1) raf = requestAnimationFrame(loop);
+      else raf = null;
+    }
+    btn.addEventListener('mousemove', function(e){
+      var r = btn.getBoundingClientRect();
+      tx2 = (e.clientX - (r.left + r.width / 2)) / r.width * 20;
+      ty2 = (e.clientY - (r.top + r.height / 2)) / r.height * 20;
+      if (!raf) raf = requestAnimationFrame(loop);
+    });
+    btn.addEventListener('mouseleave', function(){
+      tx2 = 0; ty2 = 0;
+      if (!raf) raf = requestAnimationFrame(loop);
+    });
+  });
+}
+
+/* ---------- Ripple on CTAs ---------- */
+document.querySelectorAll('.btn').forEach(function(btn){
+  btn.addEventListener('click', function(e){
+    if (reduced) return;
+    var r = btn.getBoundingClientRect();
+    var sp = document.createElement('span');
+    sp.className = 'ripple';
+    var size = 12;
+    sp.style.width = sp.style.height = size + 'px';
+    sp.style.left = (e.clientX - r.left - size / 2) + 'px';
+    sp.style.top = (e.clientY - r.top - size / 2) + 'px';
+    btn.appendChild(sp);
+    if (hasGSAP) {
+      gsap.to(sp, { scale: 25, opacity: 0, duration: 0.7, ease: 'power2.out', onComplete: function(){ sp.remove(); } });
+    } else { sp.remove(); }
+  });
+});
+
+})();
+</script>
+
+</body>
+</html>
